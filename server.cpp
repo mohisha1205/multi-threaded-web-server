@@ -76,19 +76,48 @@ string findFileExt (string fileEx) {
 //     }
 // }
 
+#include <ctime> // For timestamp
+
+void log_event(const string& event, const string& file, const string& status) {
+    FILE* logFile = fopen("server.log", "a");
+    if (!logFile) return;
+
+    // Get current timestamp
+    time_t now = time(0);
+    char* dt = ctime(&now);
+    dt[strlen(dt) - 1] = '\0'; // remove newline
+
+    fprintf(logFile, "[%s]\tEvent: %s |\tFile: %s |\tStatus: %s\n",
+            dt,
+            event.c_str(),
+            file.empty() ? "-" : file.c_str(),
+            status.c_str());
+
+    fclose(logFile);
+    // printf("[%s]\tEvent: %s |\tFile: %s |\tStatus: %s\n",
+    //     dt,
+    //     event.c_str(),
+    //     file.empty() ? "-" : file.c_str(),
+    //     status.c_str());
+
+}
+
 void send_message(int fd, string filePath, string headerFile) {
-    string header = Messages[HTTP_HEADER] + headerFile;
+    // string header = Messages[HTTP_HEADER] + headerFile;
     filePath = "./public" + filePath;
 
     struct stat stat_buff;
 
     // Send HTTP header first
-    write(fd, header.c_str(), header.length());
+    // write(fd, header.c_str(), header.length());
 
     // Open the file
     int fdimg = open(filePath.c_str(), O_RDONLY);
     if (fdimg < 0) {
+        write(fd, Messages[NOT_FOUND].c_str(), Messages[NOT_FOUND].length());
+        close(fd);
         perror(("Cannot open file: " + filePath).c_str());
+        log_event("File not found", filePath, "\t404 Not Found");
         return;
     }
 
@@ -98,6 +127,9 @@ void send_message(int fd, string filePath, string headerFile) {
         close(fdimg);
         return;
     }
+    string header = Messages[HTTP_HEADER] + headerFile;
+    write(fd, header.c_str(), header.length());
+
 
     size_t img_size = stat_buff.st_size;
     size_t block_size = stat_buff.st_blksize;
@@ -120,9 +152,11 @@ void send_message(int fd, string filePath, string headerFile) {
     close(fdimg);
 
     if (sent_size > 0) {
-        printf("Sent %zu bytes from file: %s\n", sent_size, filePath.c_str());
+        printf("Sent file: %s\n", filePath.c_str());
+        log_event("Sent file", filePath, "\t200 OK");
     } else {
         printf("No data sent for file: %s\n", filePath.c_str());
+        log_event("No data sent",filePath.c_str(), "\t500 Internal Server Error");
     }
 }
 
@@ -147,18 +181,22 @@ void getData (string requestType, string client_message) {
 
     }
 
-    int found = client_message.find("cookie");
-    if (found != string::npos) {
-        client_message.erase(0,found+8); //erase upto space after cookie
-        client_message = getStr(client_message, ' ');
-        data = data+"&"+getStr(client_message, '\n');
-    }
+    // int found = client_message.find("cookie");
+    // if (found != string::npos) {
+    //     client_message.erase(0,found+8); //erase upto space after cookie
+    //     client_message = getStr(client_message, ' ');
+    //     data = data+"&"+getStr(client_message, '\n');
+    // }
 
     while (data.length()>0) {
         extract = getStr(data, '&');
+        serverData.clear();
         serverData.push_back(extract);
         data.erase(0,extract.length()+1); // changed
-
+        for (auto s: serverData) {
+            printf("Received POST field: %s\n", s.c_str());
+            log_event("Received POST field", s, "200 OK");
+        }
     }
 }
 
@@ -168,17 +206,26 @@ void * connection_handler (void* socket_desc) {
     int request=read(newSock, client_message, client_message_SIZE);
     string message(client_message, request);
     // string message = client_message;
-    sem_wait(&mutex);
-    thread_count++;
-    printf("Thread counter %d\n", thread_count);
-    if (thread_count>20) {
-        write(newSock, Messages[BAD_REQUEST].c_str(), Messages[BAD_REQUEST].length());
-        thread_count--;
-        close(newSock);
-        sem_post(&mutex);
-        pthread_exit(NULL);
-    }
-    sem_post(&mutex);
+    // sem_wait(&mutex);
+    // thread_count++;
+    // printf("Thread counter %d\n", thread_count);
+    // if (thread_count>10) {
+    //     write(newSock, Messages[BAD_REQUEST].c_str(), Messages[BAD_REQUEST].length());
+    //     thread_count--;
+    //     close(newSock);
+    //     sem_post(&mutex);
+    //     pthread_exit(NULL);
+    // }
+    // if (thread_count >= 10) {
+//     sem_post(&mutex);
+//     write(newSock, Messages[BAD_REQUEST].c_str(), Messages[BAD_REQUEST].length());
+//     printf("Rejected connection: max threads reached.\n");
+//     close(newSock);
+//     pthread_exit(NULL);
+// }
+// thread_count++;
+// printf("Thread counter %d\n", thread_count);
+//     sem_post(&mutex);
 
     if (request<0)
         puts("Receive failed.");
@@ -278,7 +325,10 @@ void * connection_handler (void* socket_desc) {
         string requestFile = getStr(message, ' ');
 
         // Default to index.html if root is requested
-        if (requestFile == "/") {
+        // if (requestFile == "/") {
+        //     requestFile = "/index.html";
+        // }
+        if (requestFile.length() <= 1) {
             requestFile = "/index.html";
         }
 
@@ -291,11 +341,11 @@ void * connection_handler (void* socket_desc) {
             //     getData(requestType, client_message);
             // }
             // else {
-            serverData.clear();
+            // serverData.clear();
                 getData(requestType, client_message);
-                for (auto s: serverData) {
-                    printf("Received POST field: %s\n", s.c_str());
-                }
+                // for (auto s: serverData) {
+                //     printf("Received POST field: %s\n", s.c_str());
+                // }
             // }
 
             sem_wait(&mutex);
@@ -304,61 +354,173 @@ void * connection_handler (void* socket_desc) {
         }
 
     }
-    printf("\n*****Exiting Server*****\n");
-    sleep(2);
+    // printf("\n*****Exiting Server*****\n");
+    sleep(5);
     close(newSock);
     sem_wait(&mutex);
     thread_count--;
+    // printf("Thread count: %d\n", thread_count);
+    printf("Thread finished execution. Thread count: %d\n", thread_count);
     sem_post(&mutex);
     pthread_exit(NULL);
 }
 
-int main (int argc, char const *argv[]) {
-    sem_init(&mutex,0,1);
-    int server_socket, client_socket, *thread_socket;
+// int main (int argc, char const *argv[]) {
+//     sem_init(&mutex,0,1);
+//     int server_socket, client_socket, *thread_socket;
+//     int randomPORT = PORT;
+//     struct sockaddr_in server_address, client_address;
+//     char ip4[INET_ADDRSTRLEN];
+
+//     server_socket = socket(AF_INET, SOCK_STREAM, 0);
+//     if (server_socket<0) {
+//         perror("Error in socket: ");
+//         exit(EXIT_FAILURE);
+//     }
+
+//     randomPORT = 8080 + (rand()%10);
+//     memset(&server_address,0,sizeof server_address);
+//     server_address.sin_family=AF_INET;
+//     server_address.sin_addr.s_addr = htonl(INADDR_ANY);
+//     server_address.sin_port = htons(randomPORT);
+//     while (bind(server_socket, (struct sockaddr *)&server_address, sizeof(server_address))<0) {
+//         randomPORT = 8080 + (rand()%10);
+//         server_address.sin_port = htons(randomPORT);
+//     }
+//     if (listen(server_socket,10) < 0) {
+//         perror("Error in listen: ");
+//         exit(EXIT_FAILURE);
+//     }
+
+//     while(1) {
+//         socklen_t len = sizeof(client_address);
+//         printf("Listening port: %d \n", randomPORT);
+//         client_socket = accept(server_socket, (struct sockaddr *)&client_address, &len );
+//         if (client_socket<0) {
+//             perror("Unable to accept connection: ");
+//             return 0;
+//         }
+//         else {
+//             inet_ntop(AF_INET, &(client_address.sin_addr), ip4, INET_ADDRSTRLEN);
+//             printf("Connected to %s \n", ip4);
+//         }
+
+//         // ----- THREAD LIMIT CHECK -----
+//         sem_wait(&mutex);
+//         if (thread_count >= 10) {
+//             sem_post(&mutex);
+//             // Reject the connection with 400 Bad Request
+//             write(client_socket, Messages[BAD_REQUEST].c_str(), Messages[BAD_REQUEST].length());
+//             printf("Rejected connection: max threads reached.\n");
+//             close(client_socket);
+//             continue;
+//         }
+//         // Safe to spawn a new thread
+//         thread_count++;
+//         printf("Thread counter %d\n", thread_count);
+//         sem_post(&mutex);
+
+//         pthread_t multi_thread;
+//         thread_socket = new int();
+//         *thread_socket = client_socket;
+
+//         if (pthread_create(&multi_thread, NULL, connection_handler, (void*)thread_socket)!=0) {
+//             perror("Could not create thread");
+//             // Roll back count if thread creation failed
+//             sem_wait(&mutex);
+//             thread_count--;
+//             sem_post(&mutex);
+//             close(client_socket);
+//             return 0;
+//         } 
+//         else {
+//             pthread_detach(multi_thread); // Detach the thread to avoid memory leaks
+//         }
+//     }
+// }   
+#define MAX_THREADS 10
+
+int main(int argc, char const *argv[]) {
+    sem_init(&mutex, 0, 1);
+
+    int server_socket, client_socket;
+    int *thread_socket;
     int randomPORT = PORT;
     struct sockaddr_in server_address, client_address;
     char ip4[INET_ADDRSTRLEN];
 
+    // 1. Create socket
     server_socket = socket(AF_INET, SOCK_STREAM, 0);
-    if (server_socket<0) {
-        perror("Error in socket: ");
+    if (server_socket < 0) {
+        perror("Error in socket");
         exit(EXIT_FAILURE);
     }
 
-    randomPORT = 8080 + (rand()%10);
-    memset(&server_address,0,sizeof server_address);
-    server_address.sin_family=AF_INET;
+    // 2. Bind to a random port in [PORT..PORT+9]
+    randomPORT = PORT + (rand() % 10);
+    memset(&server_address, 0, sizeof(server_address));
+    server_address.sin_family = AF_INET;
     server_address.sin_addr.s_addr = htonl(INADDR_ANY);
     server_address.sin_port = htons(randomPORT);
-    while (bind(server_socket, (struct sockaddr *)&server_address, sizeof(server_address))<0) {
-        randomPORT = 8080 + (rand()%10);
+
+    while (bind(server_socket, (struct sockaddr *)&server_address, sizeof(server_address)) < 0) {
+        randomPORT = PORT + (rand() % 10);
         server_address.sin_port = htons(randomPORT);
     }
-    if (listen(server_socket,10) < 0) {
-        perror("Error in listen: ");
+
+    // 3. Listen
+    if (listen(server_socket, 10) < 0) {
+        perror("Error in listen");
         exit(EXIT_FAILURE);
     }
 
-    while(1) {
-        socklen_t len = sizeof(client_address);
-        printf("Listening port: %d \n", randomPORT);
-        client_socket = accept(server_socket, (struct sockaddr *)&client_address, &len );
-        if (client_socket<0) {
-            perror("Unable to accept connection: ");
-            return 0;
-        }
-        else {
-            inet_ntop(AF_INET, &(client_address.sin_addr), ip4, INET_ADDRSTRLEN);
-            printf("Connected to %s \n", ip4);
-        }
-        pthread_t multi_thread;
-        thread_socket = new int();
-        *thread_socket = client_socket;
+    printf("Server listening on port %d\n", randomPORT);
 
-        if (pthread_create(&multi_thread, NULL, connection_handler, (void*)thread_socket)!=0) {
-            perror("Could not create thread");
-            return 0;
+    // 4. Accept loop
+    while (true) {
+        socklen_t len = sizeof(client_address);
+        client_socket = accept(server_socket, (struct sockaddr *)&client_address, &len);
+        if (client_socket < 0) {
+            perror("Unable to accept connection");
+            continue;
         }
+
+        // Get client IP
+        inet_ntop(AF_INET, &(client_address.sin_addr), ip4, INET_ADDRSTRLEN);
+        printf("Connected to %s\n", ip4);
+        log_event("Client connected", "\t\t\t", "CONNECTED");
+
+        // Thread limit check
+        sem_wait(&mutex);
+        if (thread_count >= MAX_THREADS) {
+            sem_post(&mutex);
+            write(client_socket, Messages[BAD_REQUEST].c_str(), Messages[BAD_REQUEST].length());
+            printf("Rejected connection: max threads reached (%d)\n", thread_count);
+            log_event("Thread limit reached","\t\t\t", "400 Bad Request");
+            close(client_socket);
+            continue;
+        }
+        // Increment and spawn
+        thread_count++;
+        printf("Thread count: %d\n", thread_count);
+        sem_post(&mutex);
+
+        // Create worker thread
+        pthread_t tid;
+        thread_socket = new int(client_socket);
+        if (pthread_create(&tid, NULL, connection_handler, (void*)thread_socket) != 0) {
+            perror("Could not create thread");
+            // Roll back count
+            sem_wait(&mutex);
+            thread_count--;
+            printf("Thread count decremented (create fail): %d\n", thread_count);
+            sem_post(&mutex);
+            close(client_socket);
+            delete thread_socket;
+            continue;
+        }
+        pthread_detach(tid);
     }
-}   
+
+    return 0;
+}
