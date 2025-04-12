@@ -78,29 +78,67 @@ string findFileExt (string fileEx) {
 
 #include <ctime> // For timestamp
 
+// void log_event(const string& event, const string& file, const string& status) {
+//     FILE* logFile = fopen("server.log", "a");
+//     if (!logFile) return;
+
+//     // Get current timestamp
+//     time_t now = time(0);
+//     char* dt = ctime(&now);
+//     dt[strlen(dt) - 1] = '\0'; // remove newline
+
+//     fprintf(logFile, "[%s]\tEvent: %s |\tFile: %s |\tStatus: %s\n",
+//             dt,
+//             event.c_str(),
+//             file.empty() ? "-" : file.c_str(),
+//             status.c_str());
+
+//     fclose(logFile);
+//     // printf("[%s]\tEvent: %s |\tFile: %s |\tStatus: %s\n",
+//     //     dt,
+//     //     event.c_str(),
+//     //     file.empty() ? "-" : file.c_str(),
+//     //     status.c_str());
+
+// }
 void log_event(const string& event, const string& file, const string& status) {
     FILE* logFile = fopen("server.log", "a");
     if (!logFile) return;
 
     // Get current timestamp
     time_t now = time(0);
-    char* dt = ctime(&now);
-    dt[strlen(dt) - 1] = '\0'; // remove newline
+    struct tm* t = localtime(&now);
+    char timestamp[64];
+    strftime(timestamp, sizeof(timestamp), "%Y-%m-%d %H:%M:%S", t); // e.g. 2025-04-12 12:15:45
 
-    fprintf(logFile, "[%s]\tEvent: %s |\tFile: %s |\tStatus: %s\n",
-            dt,
-            event.c_str(),
-            file.empty() ? "-" : file.c_str(),
-            status.c_str());
+    string logLevel = "[INFO]";
+
+    // Determine log level
+    if (status.find("404") != string::npos || status.find("500") != string::npos) {
+        logLevel = "[ERROR]";
+    } else if (event == "Client connected") {
+        logLevel = "[INFO]";
+    }
+
+    // Format message based on event
+    if (event == "Client connected") {
+        fprintf(logFile, "[%s] %s Received request from %s\n", timestamp, logLevel.c_str(), file.c_str());
+    } else if (event == "Sent file") {
+        fprintf(logFile, "[%s] %s Sent file %s with status %s\n", timestamp, logLevel.c_str(), file.c_str(), status.c_str());
+    } else if (event == "File not found") {
+        fprintf(logFile, "[%s] %s File not found: %s (404 Not Found)\n", timestamp, logLevel.c_str(), file.c_str());
+    } else if (event == "Received POST field") {
+        fprintf(logFile, "[%s] %s Received POST data: %s\n", timestamp, logLevel.c_str(), file.c_str());
+    } else if (event == "Thread limit reached") {
+        fprintf(logFile, "[%s] [ERROR] Thread limit reached: %s\n", timestamp,status.c_str());
+    } else {
+        // Generic fallback
+        fprintf(logFile, "[%s] %s %s (%s)\n", timestamp, logLevel.c_str(), event.c_str(), file.c_str());
+    }
 
     fclose(logFile);
-    // printf("[%s]\tEvent: %s |\tFile: %s |\tStatus: %s\n",
-    //     dt,
-    //     event.c_str(),
-    //     file.empty() ? "-" : file.c_str(),
-    //     status.c_str());
-
 }
+
 
 void send_message(int fd, string filePath, string headerFile) {
     // string header = Messages[HTTP_HEADER] + headerFile;
@@ -117,7 +155,7 @@ void send_message(int fd, string filePath, string headerFile) {
         write(fd, Messages[NOT_FOUND].c_str(), Messages[NOT_FOUND].length());
         close(fd);
         perror(("Cannot open file: " + filePath).c_str());
-        log_event("File not found", filePath, "\t404 Not Found");
+        log_event("File not found", filePath, "404 Not Found");
         return;
     }
 
@@ -153,7 +191,8 @@ void send_message(int fd, string filePath, string headerFile) {
 
     if (sent_size > 0) {
         printf("Sent file: %s\n", filePath.c_str());
-        log_event("Sent file", filePath, "\t200 OK");
+        log_event("Sent file", filePath, "200 OK");
+
     } else {
         printf("No data sent for file: %s\n", filePath.c_str());
         log_event("No data sent",filePath.c_str(), "\t500 Internal Server Error");
@@ -347,6 +386,13 @@ void * connection_handler (void* socket_desc) {
                 //     printf("Received POST field: %s\n", s.c_str());
                 // }
             // }
+            size_t qmark = requestFile.find('?');
+            if (qmark != string::npos) {
+                requestFile = requestFile.substr(0, qmark);
+            }
+
+            string fileExt = requestFile.substr(requestFile.find_last_of('.') + 1);
+            string fileEx = getStr(fileExt, '?');
 
             sem_wait(&mutex);
             send_message(newSock, requestFile, findFileExt(fileEx));
@@ -488,7 +534,7 @@ int main(int argc, char const *argv[]) {
         // Get client IP
         inet_ntop(AF_INET, &(client_address.sin_addr), ip4, INET_ADDRSTRLEN);
         printf("Connected to %s\n", ip4);
-        log_event("Client connected", "\t\t\t", "CONNECTED");
+        log_event("Client connected", ip4, "CONNECTED");
 
         // Thread limit check
         sem_wait(&mutex);
@@ -496,7 +542,7 @@ int main(int argc, char const *argv[]) {
             sem_post(&mutex);
             write(client_socket, Messages[BAD_REQUEST].c_str(), Messages[BAD_REQUEST].length());
             printf("Rejected connection: max threads reached (%d)\n", thread_count);
-            log_event("Thread limit reached","\t\t\t", "400 Bad Request");
+            log_event("Thread limit reached","", "400 Bad Request");
             close(client_socket);
             continue;
         }

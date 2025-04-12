@@ -1,226 +1,36 @@
-[Sun Apr  6 22:40:26 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Sun Apr  6 22:40:26 2025] Event: File not found | IP: - | File: ./public/xyz.html | Status: 404 Not Found
-[Sun Apr  6 22:41:40 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Sun Apr  6 22:41:40 2025] Event: File not found | IP: - | File: ./public/xyz.html | Status: 404 Not Found
-[Sun Apr  6 22:41:46 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Sun Apr  6 22:41:47 2025] Event: File sent | IP: - | File: /index.html | Status: 200 OK
-[Sun Apr  6 22:41:47 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Sun Apr  6 22:41:47 2025] Event: File sent | IP: - | File: /favicon.ico | Status: 200 OK
-[Sun Apr  6 22:46:12 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Sun Apr  6 22:46:12 2025] Event: File sent | IP: - | File: /index.html | Status: 200 OK
-[Sun Apr  6 22:46:15 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Sun Apr  6 22:46:16 2025] Event: File sent | IP: - | File: /index.html | Status: 200 OK
-[Mon Apr  7 11:44:37 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 11:44:37 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 11:44:37 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 11:44:37 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 11:44:37 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 11:44:37 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 11:44:37 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 11:44:37 2025] Event: File sent | IP: - | File: ./public/index.html | Status: 200 OK
-[Mon Apr  7 11:44:37 2025] Event: File sent | IP: - | File: ./public/index.html | Status: 200 OK
-[Mon Apr  7 11:44:37 2025] Event: File sent | IP: - | File: ./public/index.html | Status: 200 OK
-[Mon Apr  7 11:44:37 2025] Event: File sent | IP: - | File: ./public/index.html | Status: 200 OK
-[Mon Apr  7 11:44:37 2025] Event: File sent | IP: - | File: ./public/index.html | Status: 200 OK
-[Mon Apr  7 11:44:37 2025] Event: File sent | IP: - | File: ./public/index.html | Status: 200 OK
-[Mon Apr  7 11:44:37 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 11:44:37 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 11:44:37 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 11:44:37 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 11:44:37 2025] Event: File sent | IP: - | File: ./public/index.html | Status: 200 OK
-[Mon Apr  7 11:44:37 2025] Event: File sent | IP: - | File: ./public/index.html | Status: 200 OK
-[Mon Apr  7 11:44:37 2025] Event: File sent | IP: - | File: ./public/index.html | Status: 200 OK
-[Mon Apr  7 11:44:37 2025] Event: Thread limit reached | IP: - | File: - | Status: 400 Bad Request
-[Mon Apr  7 11:44:37 2025] Event: File sent | IP: - | File: ./public/index.html | Status: 200 OK
-[Mon Apr  7 11:44:37 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 11:44:37 2025] Event: Thread limit reached | IP: - | File: - | Status: 400 Bad Request
-[Mon Apr  7 11:44:37 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 11:44:37 2025] Event: Thread limit reached | IP: - | File: - | Status: 400 Bad Request
-[Mon Apr  7 11:44:37 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 11:44:37 2025] Event: Thread limit reached | IP: - | File: - | Status: 400 Bad Request
-[Mon Apr  7 11:44:37 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 11:44:37 2025] Event: Thread limit reached | IP: - | File: - | Status: 400 Bad Request
-[Mon Apr  7 11:47:12 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 11:47:13 2025] Event: File sent | IP: - | File: ./public/index.html | Status: 200 OK
-[Mon Apr  7 11:47:13 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 11:47:13 2025] Event: File sent | IP: - | File: ./public/test.jpg | Status: 200 OK
-[Mon Apr  7 11:47:39 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 11:47:39 2025] Event: File sent | IP: - | File: ./public/index.html | Status: 200 OK
-[Mon Apr  7 11:47:44 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 11:47:44 2025] Event: File sent | IP: - | File: ./public/test.jpg | Status: 200 OK
-[Mon Apr  7 12:03:07 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:03:07 2025] Event: Sent file | IP: - | File: ./public/index.html | Status: 200 OK
-[Mon Apr  7 12:03:07 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:03:07 2025] Event: Sent file | IP: - | File: ./public/test.jpg | Status: 200 OK
-[Mon Apr  7 12:18:06 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:18:06 2025] Event: Sent file | IP: - | File: ./public/index.html | Status: 200 OK
-[Mon Apr  7 12:18:06 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:18:06 2025] Event: Sent file | IP: - | File: ./public/test.jpg | Status: 200 OK
-[Mon Apr  7 12:18:32 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:18:32 2025] Event: Sent file | IP: - | File: ./public/index.html | Status: 200 OK
-[Mon Apr  7 12:18:37 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:18:37 2025] Event: Sent file | IP: - | File: ./public/test.jpg | Status: 200 OK
-[Mon Apr  7 12:27:57 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:27:57 2025] Event: Sent file | IP: - | File: ./public/index.html | Status: 200 OK
-[Mon Apr  7 12:28:02 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:28:02 2025] Event: Sent file | IP: - | File: ./public/test.jpg | Status: 200 OK
-[Mon Apr  7 12:28:12 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:28:12 2025] Event: Sent file | IP: - | File: ./public/index.html | Status: 200 OK
-[Mon Apr  7 12:28:17 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:28:17 2025] Event: Sent file | IP: - | File: ./public/test.jpg | Status: 200 OK
-[Mon Apr  7 12:28:22 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:28:26 2025] Event: Sent file | IP: - | File: ./public/trial.html | Status: 200 OK
-[Mon Apr  7 12:28:26 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:28:26 2025] Event: Sent file | IP: - | File: ./public/test.jpg | Status: 200 OK
-[Mon Apr  7 12:28:27 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:29:24 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:29:24 2025] Event: Sent file | IP: - | File: ./public/index.html | Status: 200 OK
-[Mon Apr  7 12:29:29 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:29:29 2025] Event: Sent file | IP: - | File: ./public/test.jpg | Status: 200 OK
-[Mon Apr  7 12:34:46 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:34:51 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:34:51 2025] Event: Sent file | IP: - | File: ./public/cater.html | Status: 200 OK
-[Mon Apr  7 12:34:51 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:34:51 2025] Event: File not found | IP: - | File: ./public/w3images/hamburger.jpg | Status: 404 Not Found
-[Mon Apr  7 12:34:51 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:34:51 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:34:51 2025] Event: File not found | IP: - | File: ./public/w3images/tablesetting2.jpg | Status: 404 Not Found
-[Mon Apr  7 12:34:51 2025] Event: File not found | IP: - | File: ./public/w3images/tablesetting.jpg | Status: 404 Not Found
-[Mon Apr  7 12:34:56 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:34:56 2025] Event: File not found | IP: - | File: ./public/w3images/hamburger.jpg | Status: 404 Not Found
-[Mon Apr  7 12:34:56 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:34:56 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:34:56 2025] Event: File not found | IP: - | File: ./public/w3images/tablesetting.jpg | Status: 404 Not Found
-[Mon Apr  7 12:34:56 2025] Event: File not found | IP: - | File: ./public/w3images/tablesetting2.jpg | Status: 404 Not Found
-[Mon Apr  7 12:35:44 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:35:44 2025] Event: File not found | IP: - | File: ./public/action_page.php?Name=Mohisha&People=2&date=2020-11-16T20%3A00&Message=hi%21+checking+if+it+works | Status: 404 Not Found
-[Mon Apr  7 12:36:46 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:36:48 2025] Event: Sent file | IP: - | File: ./public/cater.html | Status: 200 OK
-[Mon Apr  7 12:36:48 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:36:48 2025] Event: File not found | IP: - | File: ./public/w3images/hamburger.jpg | Status: 404 Not Found
-[Mon Apr  7 12:36:48 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:36:48 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:36:48 2025] Event: File not found | IP: - | File: ./public/w3images/tablesetting2.jpg | Status: 404 Not Found
-[Mon Apr  7 12:36:48 2025] Event: File not found | IP: - | File: ./public/w3images/tablesetting.jpg | Status: 404 Not Found
-[Mon Apr  7 12:36:53 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:36:53 2025] Event: File not found | IP: - | File: ./public/w3images/hamburger.jpg | Status: 404 Not Found
-[Mon Apr  7 12:36:53 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:36:53 2025] Event: File not found | IP: - | File: ./public/w3images/tablesetting2.jpg | Status: 404 Not Found
-[Mon Apr  7 12:36:53 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:36:53 2025] Event: File not found | IP: - | File: ./public/w3images/tablesetting.jpg | Status: 404 Not Found
-[Mon Apr  7 12:37:12 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:37:12 2025] Event: File not found | IP: - | File: ./public/cater.html?Name=mohisha&People=2&date=2020-11-16T20%3A00&Message=hi%21+checking+if+it+works | Status: 404 Not Found
-[Mon Apr  7 12:39:36 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:39:36 2025] Event: Sent file | IP: - | File: ./public/cater.html | Status: 200 OK
-[Mon Apr  7 12:39:36 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:39:36 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:39:36 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:39:36 2025] Event: File not found | IP: - | File: ./public/w3images/hamburger.jpg | Status: 404 Not Found
-[Mon Apr  7 12:39:36 2025] Event: File not found | IP: - | File: ./public/w3images/tablesetting.jpg | Status: 404 Not Found
-[Mon Apr  7 12:39:36 2025] Event: File not found | IP: - | File: ./public/w3images/tablesetting2.jpg | Status: 404 Not Found
-[Mon Apr  7 12:39:41 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:39:41 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:39:41 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:39:41 2025] Event: File not found | IP: - | File: ./public/w3images/tablesetting.jpg | Status: 404 Not Found
-[Mon Apr  7 12:39:41 2025] Event: File not found | IP: - | File: ./public/w3images/hamburger.jpg | Status: 404 Not Found
-[Mon Apr  7 12:39:41 2025] Event: File not found | IP: - | File: ./public/w3images/tablesetting2.jpg | Status: 404 Not Found
-[Mon Apr  7 12:39:58 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:39:58 2025] Event: Sent file | IP: - | File: ./public/cater.html | Status: 200 OK
-[Mon Apr  7 12:39:58 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:39:58 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:39:58 2025] Event: File not found | IP: - | File: ./public/w3images/hamburger.jpg | Status: 404 Not Found
-[Mon Apr  7 12:39:58 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:39:58 2025] Event: File not found | IP: - | File: ./public/w3images/tablesetting2.jpg | Status: 404 Not Found
-[Mon Apr  7 12:39:58 2025] Event: File not found | IP: - | File: ./public/w3images/tablesetting.jpg | Status: 404 Not Found
-[Mon Apr  7 12:40:03 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:40:03 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:40:03 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:40:03 2025] Event: File not found | IP: - | File: ./public/w3images/tablesetting2.jpg | Status: 404 Not Found
-[Mon Apr  7 12:40:03 2025] Event: File not found | IP: - | File: ./public/w3images/tablesetting.jpg | Status: 404 Not Found
-[Mon Apr  7 12:40:03 2025] Event: File not found | IP: - | File: ./public/w3images/hamburger.jpg | Status: 404 Not Found
-[Mon Apr  7 12:45:37 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:45:40 2025] Event: Sent file | IP: - | File: ./public/cater.html | Status: 200 OK
-[Mon Apr  7 12:45:40 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:45:40 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:45:40 2025] Event: Sent file | IP: - | File: ./public/hamburger.jpg | Status: 200 OK
-[Mon Apr  7 12:45:40 2025] Event: Sent file | IP: - | File: ./public/tablesetting2.jpg | Status: 200 OK
-[Mon Apr  7 12:48:08 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:48:08 2025] Event: Sent file | IP: - | File: ./public/cater.html | Status: 200 OK
-[Mon Apr  7 12:48:13 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:48:13 2025] Event: Sent file | IP: - | File: ./public/hamburger.jpg | Status: 200 OK
-[Mon Apr  7 12:48:13 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Mon Apr  7 12:48:13 2025] Event: Sent file | IP: - | File: ./public/tablesetting2.jpg | Status: 200 OK
-[Mon Apr  7 12:48:27 2025] Event: Client connected | IP: 127.0.0.1 | File: - | Status: CONNECTED
-[Wed Apr  9 17:25:29 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 17:25:29 2025]	Event: Sent file |	File: ./public/index.html |	Status: 200 OK
-[Wed Apr  9 17:25:30 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 17:25:30 2025]	Event: Sent file |	File: ./public/hamburger.jpg |	Status: 200 OK
-[Wed Apr  9 17:25:30 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 17:25:30 2025]	Event: Sent file |	File: ./public/tablesetting2.jpg |	Status: 200 OK
-[Wed Apr  9 17:26:44 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 17:26:49 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 17:27:08 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 17:27:08 2025]	Event: Sent file |	File: ./public/index.html |	Status: 200 OK
-[Wed Apr  9 17:27:13 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 17:27:13 2025]	Event: Sent file |	File: ./public/hamburger.jpg |	Status: 200 OK
-[Wed Apr  9 17:27:13 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 17:27:13 2025]	Event: Sent file |	File: ./public/tablesetting2.jpg |	Status: 200 OK
-[Wed Apr  9 17:27:43 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 17:27:43 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 17:27:43 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 17:27:43 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 17:27:43 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 17:27:43 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 17:27:43 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 17:27:43 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 17:27:43 2025]	Event: Sent file |	File: ./public/index.html |	Status: 200 OK
-[Wed Apr  9 17:27:43 2025]	Event: Sent file |	File: ./public/index.html |	Status: 200 OK
-[Wed Apr  9 17:27:43 2025]	Event: Sent file |	File: ./public/index.html |	Status: 200 OK
-[Wed Apr  9 17:27:43 2025]	Event: Sent file |	File: ./public/index.html |	Status: 200 OK
-[Wed Apr  9 17:27:43 2025]	Event: Sent file |	File: ./public/index.html |	Status: 200 OK
-[Wed Apr  9 17:27:43 2025]	Event: Sent file |	File: ./public/index.html |	Status: 200 OK
-[Wed Apr  9 17:27:43 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 17:27:43 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 17:27:43 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 17:27:43 2025]	Event: Thread limit reached |	File: - |	Status: 400 Bad Request
-[Wed Apr  9 17:27:43 2025]	Event: Sent file |	File: ./public/index.html |	Status: 200 OK
-[Wed Apr  9 17:27:43 2025]	Event: Sent file |	File: ./public/index.html |	Status: 200 OK
-[Wed Apr  9 17:27:43 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 17:27:43 2025]	Event: Thread limit reached |	File: - |	Status: 400 Bad Request
-[Wed Apr  9 17:27:43 2025]	Event: Sent file |	File: ./public/index.html |	Status: 200 OK
-[Wed Apr  9 17:27:43 2025]	Event: Sent file |	File: ./public/index.html |	Status: 200 OK
-[Wed Apr  9 17:27:43 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 17:27:43 2025]	Event: Thread limit reached |	File: - |	Status: 400 Bad Request
-[Wed Apr  9 17:27:43 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 17:27:43 2025]	Event: Thread limit reached |	File: - |	Status: 400 Bad Request
-[Wed Apr  9 17:27:43 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 17:27:43 2025]	Event: Thread limit reached |	File: - |	Status: 400 Bad Request
-[Wed Apr  9 17:44:59 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 17:45:01 2025]	Event: Sent file |	File: ./public/index.html |	Status: 200 OK
-[Wed Apr  9 17:45:01 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 17:45:01 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 17:45:01 2025]	Event: Sent file |	File: ./public/hamburger.jpg |	Status: 200 OK
-[Wed Apr  9 17:45:01 2025]	Event: Sent file |	File: ./public/tablesetting2.jpg |	Status: 200 OK
-[Wed Apr  9 17:45:06 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 18:04:00 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 18:04:00 2025]	Event: Sent file |	File: ./public/index.html |	Status: 200 OK
-[Wed Apr  9 18:04:05 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 18:04:05 2025]	Event: Sent file |	File: ./public/hamburger.jpg |	Status: 200 OK
-[Wed Apr  9 18:04:05 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 18:04:05 2025]	Event: Sent file |	File: ./public/tablesetting2.jpg |	Status: 200 OK
-[Wed Apr  9 18:04:24 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 18:04:24 2025]	Event: Received POST field |	File: Name=Mohisha |	Status: 200 OK
-[Wed Apr  9 18:04:24 2025]	Event: Received POST field |	File: People=2 |	Status: 200 OK
-[Wed Apr  9 18:04:24 2025]	Event: Received POST field |	File: date=2020-11-16T20%3A00 |	Status: 200 OK
-[Wed Apr  9 18:04:24 2025]	Event: Received POST field |	File: Message=hi%21+checking+if+it+works |	Status: 200 OK
-[Wed Apr  9 18:04:24 2025]	Event: Sent file |	File: ./public/index.html |	Status: 200 OK
-[Wed Apr  9 18:04:29 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 18:04:29 2025]	Event: Client connected |	File: - |	Status: CONNECTED
-[Wed Apr  9 18:04:29 2025]	Event: Sent file |	File: ./public/tablesetting2.jpg |	Status: 200 OK
-[Wed Apr  9 18:04:29 2025]	Event: Sent file |	File: ./public/hamburger.jpg |	Status: 200 OK
-[Wed Apr  9 18:05:51 2025]	Event: Client connected |	File: 			 |	Status: CONNECTED
-[Wed Apr  9 18:05:51 2025]	Event: Sent file |	File: ./public/index.html |	Status: 	200 OK
-[Wed Apr  9 18:05:56 2025]	Event: Client connected |	File: 			 |	Status: CONNECTED
-[Wed Apr  9 18:05:56 2025]	Event: Client connected |	File: 			 |	Status: CONNECTED
-[Wed Apr  9 18:05:56 2025]	Event: Sent file |	File: ./public/tablesetting2.jpg |	Status: 	200 OK
-[Wed Apr  9 18:05:56 2025]	Event: Sent file |	File: ./public/hamburger.jpg |	Status: 	200 OK
+[2025-04-12 12:29:35] [INFO] Received request from 127.0.0.1
+[2025-04-12 12:29:35] [INFO] Received request from 127.0.0.1
+[2025-04-12 12:29:35] [INFO] Received request from 127.0.0.1
+[2025-04-12 12:29:35] [INFO] Received request from 127.0.0.1
+[2025-04-12 12:29:35] [INFO] Received request from 127.0.0.1
+[2025-04-12 12:29:35] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-12 12:29:35] [INFO] Received request from 127.0.0.1
+[2025-04-12 12:29:35] [INFO] Received request from 127.0.0.1
+[2025-04-12 12:29:35] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-12 12:29:35] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-12 12:29:35] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-12 12:29:35] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-12 12:29:35] [INFO] Received request from 127.0.0.1
+[2025-04-12 12:29:35] [INFO] Received request from 127.0.0.1
+[2025-04-12 12:29:35] [INFO] Received request from 127.0.0.1
+[2025-04-12 12:29:35] [INFO] Received request from 127.0.0.1
+[2025-04-12 12:29:35] [ERROR] Thread limit reached: 400 Bad Request
+[2025-04-12 12:29:35] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-12 12:29:35] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-12 12:29:35] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-12 12:29:35] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-12 12:29:35] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-12 12:29:35] [INFO] Received request from 127.0.0.1
+[2025-04-12 12:29:35] [ERROR] Thread limit reached: 400 Bad Request
+[2025-04-12 12:29:35] [INFO] Received request from 127.0.0.1
+[2025-04-12 12:29:35] [ERROR] Thread limit reached: 400 Bad Request
+[2025-04-12 12:29:35] [INFO] Received request from 127.0.0.1
+[2025-04-12 12:29:35] [ERROR] Thread limit reached: 400 Bad Request
+[2025-04-12 12:29:35] [INFO] Received request from 127.0.0.1
+[2025-04-12 12:29:35] [ERROR] Thread limit reached: 400 Bad Request
+[2025-04-12 12:32:42] [INFO] Received request from 127.0.0.1
+[2025-04-12 12:32:42] [INFO] Sent file ./public/test.txt with status 200 OK
+[2025-04-12 12:33:23] [INFO] Received request from 127.0.0.1
+[2025-04-12 12:33:23] [ERROR] File not found: ./public/miss.txt (404 Not Found)
+[2025-04-12 12:33:46] [INFO] Received request from 127.0.0.1
+[2025-04-12 12:33:46] [INFO] Sent file ./public/index.html with status 200 OK
