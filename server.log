@@ -34,3 +34,103 @@
 [2025-04-12 12:33:23] [ERROR] File not found: ./public/miss.txt (404 Not Found)
 [2025-04-12 12:33:46] [INFO] Received request from 127.0.0.1
 [2025-04-12 12:33:46] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-13 23:48:23] [INFO] Received request from 127.0.0.1
+[2025-04-13 23:48:38] [INFO] Received request from 127.0.0.1
+[2025-04-13 23:48:38] [ERROR] File not found: ./public/upload (404 Not Found)
+[2025-04-13 23:48:46] [INFO] Received request from 127.0.0.1
+[2025-04-13 23:48:46] [INFO] Sent file ./public/upload.html with status 200 OK
+[2025-04-13 23:50:03] [INFO] Received request from 127.0.0.1
+[2025-04-13 23:50:08] [INFO] Sent file ./public/upload.html with status 200 OK
+[2025-04-13 23:50:34] [INFO] Received request from 127.0.0.1
+[2025-04-13 23:50:34] [INFO] Sent file ./public/upload.html with status 200 OK
+[2025-04-13 23:57:21] [INFO] Received request from 127.0.0.1
+[2025-04-13 23:57:21] [INFO] Sent file ./public/upload.html with status 200 OK
+[2025-04-13 23:57:26] [INFO] Received request from 127.0.0.1
+[2025-04-13 23:59:09] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:00:37] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:00:37] [INFO] Sent file ./public/upload.html with status 200 OK
+[2025-04-14 00:00:51] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:07:29] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:14:49] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:14:49] [INFO] Sent file ./public/upload.html with status 200 OK
+[2025-04-14 00:15:02] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:17:40] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:17:40] [INFO] Sent file ./public/upload.html with status 200 OK
+[2025-04-14 00:17:45] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:18:57] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:18:57] [INFO] Sent file ./public/upload.html with status 200 OK
+[2025-04-14 00:19:10] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:19:10] [INFO] Sent file ./public/upload.html with status 200 OK
+[2025-04-14 00:19:40] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:19:40] [INFO] Sent file ./public/upload.html with status 200 OK
+[2025-04-14 00:20:08] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:20:12] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-14 00:20:12] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:20:12] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:20:12] [INFO] Sent file ./public/tablesetting1.jpg with status 200 OK
+[2025-04-14 00:20:12] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:20:12] [INFO] Sent file ./public/hamburger.jpg with status 200 OK
+[2025-04-14 00:20:12] [INFO] Sent file ./public/tablesetting2.jpg with status 200 OK
+[2025-04-14 00:20:25] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:20:41] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:20:41] [INFO] Received POST data: Name=Mohisha
+[2025-04-14 00:20:41] [INFO] Received POST data: People=2
+[2025-04-14 00:20:41] [INFO] Received POST data: date=2020-11-16T20%3A00
+[2025-04-14 00:20:41] [INFO] Received POST data: Message=hi%21+checking+if+it+works
+[2025-04-14 00:20:41] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-14 00:20:46] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:20:46] [INFO] Sent file ./public/hamburger.jpg with status 200 OK
+[2025-04-14 00:20:46] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:20:46] [INFO] Sent file ./public/tablesetting2.jpg with status 200 OK
+[2025-04-14 00:20:46] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:20:46] [INFO] Sent file ./public/tablesetting1.jpg with status 200 OK
+[2025-04-14 00:31:15] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:31:15] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-14 00:31:20] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:31:20] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:31:20] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:31:20] [INFO] Sent file ./public/hamburger.jpg with status 200 OK
+[2025-04-14 00:31:20] [INFO] Sent file ./public/tablesetting1.jpg with status 200 OK
+[2025-04-14 00:31:20] [INFO] Sent file ./public/tablesetting2.jpg with status 200 OK
+[2025-04-14 00:31:44] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:31:44] [INFO] Received POST data: Name=mohisha
+[2025-04-14 00:31:44] [INFO] Received POST data: People=3
+[2025-04-14 00:31:44] [INFO] Received POST data: date=2020-11-16T20%3A00
+[2025-04-14 00:31:44] [INFO] Received POST data: Message=hi%21+checking+if+it+works««¶$Ó
+[2025-04-14 00:31:44] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-14 00:31:49] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:31:49] [INFO] Sent file ./public/hamburger.jpg with status 200 OK
+[2025-04-14 00:31:49] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:31:49] [INFO] Sent file ./public/tablesetting2.jpg with status 200 OK
+[2025-04-14 00:31:49] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:31:49] [INFO] Sent file ./public/tablesetting1.jpg with status 200 OK
+[2025-04-14 00:32:24] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:32:24] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:32:24] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:32:24] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:32:24] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:32:24] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-14 00:32:24] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-14 00:32:24] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-14 00:32:24] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-14 00:32:24] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:32:24] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-14 00:32:24] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:32:24] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-14 00:32:24] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:32:24] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:32:24] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-14 00:32:24] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-14 00:32:24] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:32:24] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-14 00:32:24] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:32:24] [ERROR] Thread limit reached: 400 Bad Request
+[2025-04-14 00:32:24] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-14 00:32:24] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:32:24] [ERROR] Thread limit reached: 400 Bad Request
+[2025-04-14 00:32:24] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:32:24] [ERROR] Thread limit reached: 400 Bad Request
+[2025-04-14 00:32:24] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:32:24] [ERROR] Thread limit reached: 400 Bad Request
+[2025-04-14 00:32:24] [INFO] Received request from 127.0.0.1
+[2025-04-14 00:32:24] [ERROR] Thread limit reached: 400 Bad Request
