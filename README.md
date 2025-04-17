@@ -74,27 +74,12 @@ Events like connections, requests, errors, and responses are written to `server.
 
 ## Example Output
 
-### Client `GET` Request
-```
-GET /index.html HTTP/1.1 
-Host: localhost:8083
-```
-**Server Output**
+### Sample Server Output for `GET` Request
 ```
 Sent file: ./public/index.html
 ```
 
-### Client `POST` Request
-```
-POST /index.html HTTP/1.1
-Host: localhost:8083
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 132
-
-Name=Mohisha&People=2&date=2025-04-17T20%3A00&Message=No+onions+please
-```
-
-**Server Output**
+### Sample Server Output for `POST` Request
 ```
 Thread count: 1
 Received POST field: Name=Mohisha
