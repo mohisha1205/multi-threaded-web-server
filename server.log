@@ -96,7 +96,7 @@
 [2025-04-14 00:31:44] [INFO] Received POST data: Name=mohisha
 [2025-04-14 00:31:44] [INFO] Received POST data: People=3
 [2025-04-14 00:31:44] [INFO] Received POST data: date=2020-11-16T20%3A00
-[2025-04-14 00:31:44] [INFO] Received POST data: Message=hi%21+checking+if+it+worksÇÇ¦$î
+[2025-04-14 00:31:44] [INFO] Received POST data: Message=hi%21+checking+if+it+worksï¿½Ç¦$ï¿½
 [2025-04-14 00:31:44] [INFO] Sent file ./public/index.html with status 200 OK
 [2025-04-14 00:31:49] [INFO] Received request from 127.0.0.1
 [2025-04-14 00:31:49] [INFO] Sent file ./public/hamburger.jpg with status 200 OK
@@ -134,3 +134,66 @@
 [2025-04-14 00:32:24] [ERROR] Thread limit reached: 400 Bad Request
 [2025-04-14 00:32:24] [INFO] Received request from 127.0.0.1
 [2025-04-14 00:32:24] [ERROR] Thread limit reached: 400 Bad Request
+[2025-04-17 16:11:51] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:11:53] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-17 16:11:54] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:11:54] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:11:54] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:11:54] [INFO] Sent file ./public/hamburger.jpg with status 200 OK
+[2025-04-17 16:11:54] [INFO] Sent file ./public/tablesetting2.jpg with status 200 OK
+[2025-04-17 16:11:54] [INFO] Sent file ./public/tablesetting1.jpg with status 200 OK
+[2025-04-17 16:12:38] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:14:41] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:15:20] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:15:43] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:15:43] [INFO] Received POST data: Name=Mohisha
+[2025-04-17 16:15:43] [INFO] Received POST data: People=2
+[2025-04-17 16:15:43] [INFO] Received POST data: date=2025-04-17T20%3A00
+[2025-04-17 16:15:43] [INFO] Received POST data: Message=No+onions+please
+[2025-04-17 16:15:43] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-17 16:15:48] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:15:48] [INFO] Sent file ./public/hamburger.jpg with status 200 OK
+[2025-04-17 16:15:48] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:15:48] [INFO] Sent file ./public/tablesetting2.jpg with status 200 OK
+[2025-04-17 16:15:48] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:15:48] [INFO] Sent file ./public/tablesetting1.jpg with status 200 OK
+[2025-04-17 16:18:21] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:18:27] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-17 16:19:59] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:20:01] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-17 16:20:40] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:20:44] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:20:47] [INFO] Sent file ./public/test.txt with status 200 OK
+[2025-04-17 16:20:58] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-17 16:26:52] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:27:14] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-17 16:28:04] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:28:04] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:28:04] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:28:04] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:28:04] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:28:04] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:28:04] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-17 16:28:04] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:28:04] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-17 16:28:04] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:28:04] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-17 16:28:04] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:28:04] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:28:04] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-17 16:28:04] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-17 16:28:04] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-17 16:28:04] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-17 16:28:04] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-17 16:28:04] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-17 16:28:04] [INFO] Sent file ./public/index.html with status 200 OK
+[2025-04-17 16:28:04] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:28:04] [ERROR] Thread limit reached: 400 Bad Request
+[2025-04-17 16:28:04] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:28:04] [ERROR] Thread limit reached: 400 Bad Request
+[2025-04-17 16:28:04] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:28:04] [ERROR] Thread limit reached: 400 Bad Request
+[2025-04-17 16:28:04] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:28:04] [ERROR] Thread limit reached: 400 Bad Request
+[2025-04-17 16:28:04] [INFO] Received request from 127.0.0.1
+[2025-04-17 16:28:04] [ERROR] Thread limit reached: 400 Bad Request
