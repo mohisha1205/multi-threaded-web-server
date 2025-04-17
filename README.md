@@ -1,10 +1,9 @@
-# 🖧 Multithreaded Web Server in C++
+# Multithreaded Web Server in C++
 
 ##  Introduction
 
 This project is a lightweight multithreaded server built in C++ that handles multiple clients concurrently, serves static files, and logs request details efficiently. It's designed for simplicity, scalability, and educational clarity.
 
----
 
 ## Key Concepts
 
@@ -13,7 +12,6 @@ A **server** is a system (hardware or software) that listens for and responds to
 
 For example, when you visit a website, your browser (the client) sends an HTTP request to a server, which replies with the content of the webpage.
 
----
 
 ### Multithreading
 
@@ -21,7 +19,6 @@ For example, when you visit a website, your browser (the client) sends an HTTP r
 
 Without multithreading, a server could serve only one client at a time, leading to poor performance or timeouts. This project uses **POSIX threads (pthreads)** to implement multithreading so that each client is handled in its own thread, improving scalability and responsiveness.
 
----
 
 ## Project Overview
 
@@ -35,18 +32,6 @@ This project is a simple yet educational multithreaded web server implemented in
 - **Basic Logging** – Records each request with method, client IP, status code, and timestamp for debugging and analytics.
 - **Thread Limit Enforcement** – Limits the number of concurrent threads (default: 10) to prevent server overload.
 
----
-
-## Basic File Structure
-
-├── server.cpp // Main server logic 
-├── server.h // Header file with MIME types and response templates 
-├── public/ // Static files (HTML, CSS, images, etc.) 
-├── server.log // Generated log file with timestamps 
-└── README.md // This file
-
-
----
 
 ## How It Works
 
@@ -61,7 +46,6 @@ This project is a simple yet educational multithreaded web server implemented in
 6. All interactions, including requests, responses, and errors, are **logged** in `server.log` for debugging and analytics.
 7. The server **manages thread count** to ensure it doesn't exceed the `MAX_THREADS` limit (default: 10), preventing server overload.
 
----
 
 ## Core Concepts
 
@@ -87,7 +71,6 @@ Events like connections, requests, errors, and responses are written to `server.
 [YYYY-MM-DD HH:MM:SS] [ERROR] <error message>
 ```
 
----
 
 ## Example Output
 
